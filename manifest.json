@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "TabColor",
+    "version": "1.0",
+    "description": "Adds a color to all new tabs opened.",
+    "icons": {
+        "24": "icons/color-palette.png"
+    },
+    "content_scripts": [
+        {
+            "js": "color.js"
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ]
+}
