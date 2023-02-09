@@ -6,13 +6,14 @@
     "icons": {
         "24": "icons/color-palette.png"
     },
-    "content_scripts": [
-        {
-            "js": "color.js"
-        }
-    ],
+    
     "permissions": [
         "tabs",
         "activeTab"
-    ]
+    ],
+    "browser_action": {
+        "default_icon": "icons/color-palette.png",
+        "default_title": "TitleBarColoring",
+        "default_popup": "popup.html"
+    }
 }

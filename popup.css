@@ -1,0 +1,34 @@
+html,
+body {
+  width: 100px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+.button1 {background-color: #b72f0e;}
+.button1:hover{
+    background-color: #d74b41;
+}
+.button2 {background-color: #3652f4;}
+.button2:hover{
+    background-color: #7a8df7;
+}
+.button4 {background-color: #555555;}
+.button4:hover {
+    background-color: #adadad;
+}
