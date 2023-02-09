@@ -15,5 +15,11 @@
         "default_icon": "icons/color-palette.png",
         "default_title": "TitleBarColoring",
         "default_popup": "popup.html"
-    }
+    },
+    "content_scripts": [
+        {
+          "js": ["color.js"],
+          "matches": ["*://*/*"]
+        }
+    ]
 }

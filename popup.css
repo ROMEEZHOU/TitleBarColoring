@@ -28,7 +28,7 @@ body {
 .button2:hover{
     background-color: #7a8df7;
 }
-.button4 {background-color: #555555;}
-.button4:hover {
+.button[type="reset"] {background-color: #555555;}
+.button[type="reset"]:hover {
     background-color: #adadad;
 }
