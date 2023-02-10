@@ -12,69 +12,70 @@ body {
   border: none;
   border-radius: 4px;
   color: white;
-  width: 90%;
+  width: 100%;
   text-align: left;
-  margin-left: 5%;
+  padding-left: 5%;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   cursor: pointer;
+  margin-bottom: 5%;
 }
 
 .button1 {
-  background-color: #b72f0e;
+  background-color: #b02300;
 }
 
 .button1:hover {
-  background-color: #d74b41;
+  background-color: #df6142;
 }
 
 .button2 {
-  background-color: #e97725;
+  background-color: #da5b00;
 }
 
 .button2:hover {
-  background-color: #f7c77a;
+  background-color: #e38847;
 }
 
 .button3 {
-  background-color: #d4bf02;
+  background-color: #ffea00;
 }
 
 .button3:hover {
-  background-color: #f7ed64;
+  background-color: #fff36d;
 }
 
 .button4 {
-  background-color: #2bc743;
+  background-color: #07a11e;
 }
 
 .button4:hover {
-  background-color: #6ddd85;
+  background-color: #61d885;
 }
 
 .button5 {
-  background-color: #0e60b7;
+  background-color: #0065d1;
 }
 
 .button5:hover {
-  background-color: #4193d7;
+  background-color: #5a99dc;
 }
 
 .button6 {
-  background-color: #881be1;
+  background-color: #8509eb;
 }
 
 .button6:hover {
-  background-color: #b27af7;
+  background-color: #a773d1;
 }
 
 .button7 {
-  background-color: #de48a2;
+  background-color: #cf2a8d;
 }
 
 .button7:hover {
-  background-color: #f17adf;
+  background-color: #d480b3;
 }
 
 .button[type="reset"] {

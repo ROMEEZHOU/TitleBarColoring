@@ -1,13 +1,15 @@
-function themeWindow(window, color) {
+function themeWindow(window, textColor, darkColor, lightColor) {
     browser.theme.update(window.id, {
         images: {
             theme_frame: "",
         },
         colors: {
-            frame: "white",
-            tab_background_text: "white",
-            toolbar: color,
-            toolbar_text: "white"
+            frame: darkColor,
+            tab_background_text: textColor,
+            accentcolor: lightColor,
+            toolbar: lightColor,
+            toolbar_text: textColor,
+            tab_line: darkColor
         }
     });
 }
@@ -21,35 +23,42 @@ function handleMessage(request, sender, sendResponse) {
     sendResponse({ response: "Response from background script" });
 
     // set colors
-    red = "#b72f0e";
-    orange = "#e97725";
-    yellow = "#d4bf02";
-    green = "#2bc743";
-    blue = "#3652f4";
-    purple = "#881be1";
-    pink = "#de48a2";
+    red = "#b02300";
+    lightRed = "#df6142";
+    orange = "#da5b00";
+    lightOrange = "#e38847"
+    yellow = "#ffea00";
+    lightYellow = "#fff36d";
+    green = "#07a11e";
+    lightGreen = "#61d885";
+    blue = "#0065d1";
+    lightBlue = "#5a99dc";
+    purple = "#8509eb";
+    lightPurple = "#a773d1";
+    pink = "#cf2a8d";
+    lightPink = "#d480b3";
 
     switch (request.greeting) {
         case "Red":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, red)));
+            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", red, lightRed)));
             break;
         case "Orange":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, orange)));
+            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", orange, lightOrange)));
             break;
         case "Yellow":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, yellow)));
+            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "black", yellow, lightYellow)));
             break;
         case "Green":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, green)));
+            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", green, lightGreen)));
             break;
         case "Blue":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, blue)));
+            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", blue, lightBlue)));
             break;
         case "Purple":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, purple)));
+            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", purple, lightPurple)));
             break;
         case "Pink":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, pink)));
+            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", pink, lightPink)));
             break;
         default:
             browser.windows.getAll().then(wins => wins.forEach(themeWindow_default));
