@@ -9,14 +9,9 @@
     }
     window.hasRun = true;
 
-    function getCurrentWindow() {
-        return browser.windows.getCurrent();
-    }
 
     function themeWindow(window) {
-        // Check if the window is in private browsing
-        if (window.incognito) {
-          browser.theme.update(window.id, {
+        browser.theme.update(window.id, {
             images: {
               theme_frame: "",
             },
@@ -28,24 +23,14 @@
             }
           });
         }
-        // Reset to the default theme otherwise
-        else {
-          browser.theme.reset(window.id);
-        }
-      }
-
-    function updateWindow(window, colors) {
-        browser.theme.update(window.id, {
-            images: { theme_frame: "" },
-            colors: colors
-        });
-    }
     
     /**
      * Given a color, remove existing tab color and change to new color.
      */
     function setColor(chosen_color) {
+        console.log("testing")
         alert("hello from the function setting color");
+        console.log(browser.theme)
         browser.windows.getAll().then(wins => wins.forEach(themeWindow));
         alert("hello from setting color done");
     }
@@ -69,8 +54,6 @@
             removeColor();
         }
     });
-
-    browser.windows.onCreated.addListener(themeWindow);
 
 })();
 
