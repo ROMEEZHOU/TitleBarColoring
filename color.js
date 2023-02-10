@@ -9,23 +9,45 @@
     }
     window.hasRun = true;
 
-    const day = {
-        colors: {
-          frame: '#CF723F',
-          tab_background_text: '#111',
-        }
-    };
-    
-    
-    function updateThemeForCurrentWindow() {
-      let currentWindow = await browser.windows.getLastFocused();
-      browser.theme.update(currentWindow.id, day);
+    function getCurrentWindow() {
+        return browser.windows.getCurrent();
     }
+
+    function themeWindow(window) {
+        // Check if the window is in private browsing
+        if (window.incognito) {
+          browser.theme.update(window.id, {
+            images: {
+              theme_frame: "",
+            },
+            colors: {
+              frame: "black",
+              tab_background_text: "white",
+              toolbar: "#333",
+              toolbar_text: "white"
+            }
+          });
+        }
+        // Reset to the default theme otherwise
+        else {
+          browser.theme.reset(window.id);
+        }
+      }
+
+    function updateWindow(window, colors) {
+        browser.theme.update(window.id, {
+            images: { theme_frame: "" },
+            colors: colors
+        });
+    }
+    
     /**
      * Given a color, remove existing tab color and change to new color.
      */
     function setColor(chosen_color) {
-        browser.theme.update(currentWindow.id, day);
+        alert("hello from the function setting color");
+        browser.windows.getAll().then(wins => wins.forEach(themeWindow));
+        alert("hello from setting color done");
     }
 
     /**
@@ -34,19 +56,22 @@
     function removeColor() {
 
     }
-    
+
     /**
      * Listen for messages from the background script.
      * Call "setColor()" or "removeColor()".
      */
     browser.runtime.onMessage.addListener((message) => {
         if (message.command === "color") {
+            alert("hello from getting message")
             setColor(message.chosen_color);
         } else if (message.command === "reset") {
             removeColor();
         }
     });
 
-});
+    browser.windows.onCreated.addListener(themeWindow);
+
+})();
 
 
