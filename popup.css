@@ -12,13 +12,14 @@ body {
   border: none;
   border-radius: 4px;
   color: white;
-  width: 95%;
+  width: 100%;
   text-align: left;
-  margin-left: 5%;
+  padding-left: 5%;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   cursor: pointer;
+  margin-bottom: 5%;
 }
 
 .button1 {
@@ -26,7 +27,7 @@ body {
 }
 
 .button1:hover {
-  background-color: #c25b41;
+  background-color: #df6142;
 }
 
 .button2 {
@@ -34,15 +35,15 @@ body {
 }
 
 .button2:hover {
-  background-color: #ca8350;
+  background-color: #e38847;
 }
 
 .button3 {
-  background-color: #e9d926;
+  background-color: #ffea00;
 }
 
 .button3:hover {
-  background-color: #dfd673;
+  background-color: #fff36d;
 }
 
 .button4 {

@@ -24,11 +24,11 @@ function handleMessage(request, sender, sendResponse) {
 
     // set colors
     red = "#b02300";
-    lightRed = "#c25b41";
+    lightRed = "#df6142";
     orange = "#da5b00";
-    lightOrange = "#ca8350"
-    yellow = "#e9d926";
-    lightYellow = "#dfd673";
+    lightOrange = "#e38847"
+    yellow = "#ffea00";
+    lightYellow = "#fff36d";
     green = "#07a11e";
     lightGreen = "#61d885";
     blue = "#0065d1";
