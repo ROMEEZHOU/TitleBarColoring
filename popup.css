@@ -1,6 +1,7 @@
 html,
 body {
   width: 100px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .hidden {
@@ -8,27 +9,78 @@ body {
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    border-radius: 8px;
-    color: white;
-    width: 100px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-.button1 {background-color: #b72f0e;}
-.button1:hover{
-    background-color: #d74b41;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  width: 90%;
+  text-align: left;
+  margin-left: 5%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
-.button2 {background-color: #3652f4;}
-.button2:hover{
-    background-color: #7a8df7;
+
+.button1 {
+  background-color: #b72f0e;
 }
-.button[type="reset"] {background-color: #555555;}
+
+.button1:hover {
+  background-color: #d74b41;
+}
+
+.button2 {
+  background-color: #e97725;
+}
+
+.button2:hover {
+  background-color: #f7c77a;
+}
+
+.button3 {
+  background-color: #d4bf02;
+}
+
+.button3:hover {
+  background-color: #f7ed64;
+}
+
+.button4 {
+  background-color: #2bc743;
+}
+
+.button4:hover {
+  background-color: #6ddd85;
+}
+
+.button5 {
+  background-color: #0e60b7;
+}
+
+.button5:hover {
+  background-color: #4193d7;
+}
+
+.button6 {
+  background-color: #881be1;
+}
+
+.button6:hover {
+  background-color: #b27af7;
+}
+
+.button7 {
+  background-color: #de48a2;
+}
+
+.button7:hover {
+  background-color: #f17adf;
+}
+
+.button[type="reset"] {
+  background-color: #555555;
+}
+
 .button[type="reset"]:hover {
-    background-color: #adadad;
+  background-color: #adadad;
 }
