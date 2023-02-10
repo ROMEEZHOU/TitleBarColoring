@@ -6,7 +6,7 @@ function themeWindow(window) {
         colors: {
           frame: "black",
           tab_background_text: "white",
-          toolbar: "#333",
+          toolbar: "#b72f0e",
           toolbar_text: "white"
         }
       });
