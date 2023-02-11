@@ -18,9 +18,9 @@ function themeWindow_default(window) {
     browser.theme.reset(window.id)
 }
 
-function handleMessage(request, sender, sendResponse) {
-    console.log(`A content script sent a message: ${request.greeting}`);
-    sendResponse({ response: "Response from background script" });
+async function handleMessage(request, sender, sendResponse) {
+    
+    let currentWindow = await browser.windows.getLastFocused();
 
     // set colors
     red = "#b02300";
@@ -40,28 +40,28 @@ function handleMessage(request, sender, sendResponse) {
 
     switch (request.greeting) {
         case "Red":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", red, lightRed)));
+            themeWindow(currentWindow, "white", red, lightRed);
             break;
         case "Orange":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", orange, lightOrange)));
+            themeWindow(currentWindow, "white", orange, lightOrange);
             break;
         case "Yellow":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "black", yellow, lightYellow)));
+            themeWindow(currentWindow, "white", yellow, lightYellow);
             break;
         case "Green":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", green, lightGreen)));
+            themeWindow(currentWindow, "white", green, lightGreen);
             break;
         case "Blue":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", blue, lightBlue)));
+            themeWindow(currentWindow, "white", blue, lightBlue);
             break;
         case "Purple":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", purple, lightPurple)));
+            themeWindow(currentWindow, "white", purple, lightPurple);
             break;
         case "Pink":
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow(this, "white", pink, lightPink)));
+            themeWindow(currentWindow, "white", pink, lightPink);
             break;
         default:
-            browser.windows.getAll().then(wins => wins.forEach(themeWindow_default));
+            themeWindow_default(currentWindow);
     }
 }
 
