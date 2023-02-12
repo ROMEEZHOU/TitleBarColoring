@@ -1,3 +1,4 @@
+
 {
     "manifest_version": 2,
     "name": "TabColor",
@@ -7,20 +8,16 @@
         "24": "icons/color-palette.png"
     },
     
+    "browser_action": {
+      "default_icon": "icon.png"
+    },
     "permissions": [
-        "tabs",
-        "activeTab",
-        "theme",
-        "storage"
+      "tabs"
     ],
     "background": {
-        "scripts": [
-            "color.js"
-        ]
-    },
-    "browser_action": {
-        "default_icon": "icons/color-palette.png",
-        "default_title": "TitleBarColoring",
-        "default_popup": "popup.html"
+      "scripts": ["background.js"], 
+      "default_icon": "icons/color-palette.png", 
+      "default_title": "TitleBarColoring",
+      "default_popup": "popup.html" 
     }
-}
+  }
