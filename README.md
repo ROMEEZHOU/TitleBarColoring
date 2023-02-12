@@ -4,7 +4,7 @@
 This Firefox extension allows users to select a color from a pop-up menu to re-style their chosen tab for aesthetic and orgniazational benefits. 
 
 ## EXAMPLE 
-The screenshot below shows having two different title bar colors for different windows. The text is always set to white. And one may easily press the reset button to make the theme of a certain window go back to default mode.
+The screenshot below shows two different title bar colors for different windows. The text is always set to white. One may easily press the reset button to make the theme of a certain window go back to default mode.
 
 ![Titlebar Examples](examples/example.jpeg)
 
