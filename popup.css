@@ -1,27 +1,87 @@
-
-/* Creates styling for the popup and colorpicker display. 
-*/ 
+html,
 body {
-  background-color: #f2f2f2;
-  font-family: Arial, sans-serif;
+  width: 100px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.colorpicker {
-  display: block;
-  margin: 20px auto;
+.hidden {
+  display: none;
 }
 
-.color-box {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.selected-color {
+.button {
+  border: none;
+  border-radius: 4px;
+  color: white;
   width: 100%;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
+  text-align: left;
+  padding-left: 5%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 5%;
+}
+
+.button1 {
+  background-color: #b02300;
+}
+
+.button1:hover {
+  background-color: #df6142;
+}
+
+.button2 {
+  background-color: #da5b00;
+}
+
+.button2:hover {
+  background-color: #e38847;
+}
+
+.button3 {
+  background-color: #ffea00;
+}
+
+.button3:hover {
+  background-color: #fff36d;
+}
+
+.button4 {
+  background-color: #07a11e;
+}
+
+.button4:hover {
+  background-color: #61d885;
+}
+
+.button5 {
+  background-color: #0065d1;
+}
+
+.button5:hover {
+  background-color: #5a99dc;
+}
+
+.button6 {
+  background-color: #8509eb;
+}
+
+.button6:hover {
+  background-color: #a773d1;
+}
+
+.button7 {
+  background-color: #cf2a8d;
+}
+
+.button7:hover {
+  background-color: #d480b3;
+}
+
+.button[type="reset"] {
+  background-color: #555555;
+}
+
+.button[type="reset"]:hover {
+  background-color: #adadad;
 }

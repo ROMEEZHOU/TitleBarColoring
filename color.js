@@ -1,30 +1,69 @@
-// Store the grouped tabs based on color
-const groupedTabs = {};
-
-// Add a tab to the grouped tabs object
-function addTabToGroup(tabId, color) {
-  // If the color group doesn't exist, create it
-  if (!groupedTabs[color]) {
-    groupedTabs[color] = [];
-  }
-  
-  // Add the tab to the color group
-  groupedTabs[color].push(tabId);
+function themeWindow(window, textColor, darkColor, lightColor) {
+    browser.theme.update(window.id, {
+        images: {
+            theme_frame: "",
+        },
+        colors: {
+            frame: darkColor,
+            tab_background_text: textColor,
+            accentcolor: lightColor,
+            toolbar: lightColor,
+            toolbar_text: textColor,
+            tab_line: darkColor
+        }
+    });
 }
 
-// Remove a tab from the grouped tabs object
-function removeTabFromGroup(tabId, color) {
-  // If the color group exists, remove the tab from it
-  if (groupedTabs[color]) {
-    const index = groupedTabs[color].indexOf(tabId);
-    if (index !== -1) {
-      groupedTabs[color].splice(index, 1);
+function themeWindow_default(window) {
+    browser.theme.reset(window.id)
+}
+
+async function handleMessage(request, sender, sendResponse) {
+    
+    let currentWindow = await browser.windows.getLastFocused();
+
+    // set colors
+    red = "#b02300";
+    lightRed = "#df6142";
+    orange = "#da5b00";
+    lightOrange = "#e38847"
+    yellow = "#ffea00";
+    lightYellow = "#fff36d";
+    green = "#07a11e";
+    lightGreen = "#61d885";
+    blue = "#0065d1";
+    lightBlue = "#5a99dc";
+    purple = "#8509eb";
+    lightPurple = "#a773d1";
+    pink = "#cf2a8d";
+    lightPink = "#d480b3";
+
+    switch (request.greeting) {
+        case "Red":
+            themeWindow(currentWindow, "white", red, lightRed);
+            break;
+        case "Orange":
+            themeWindow(currentWindow, "white", orange, lightOrange);
+            break;
+        case "Yellow":
+            themeWindow(currentWindow, "white", yellow, lightYellow);
+            break;
+        case "Green":
+            themeWindow(currentWindow, "white", green, lightGreen);
+            break;
+        case "Blue":
+            themeWindow(currentWindow, "white", blue, lightBlue);
+            break;
+        case "Purple":
+            themeWindow(currentWindow, "white", purple, lightPurple);
+            break;
+        case "Pink":
+            themeWindow(currentWindow, "white", pink, lightPink);
+            break;
+        default:
+            themeWindow_default(currentWindow);
     }
-  }
 }
 
-// Get the grouped tabs object
-function getGroupedTabs() {
-  return groupedTabs;
-}
+browser.runtime.onMessage.addListener(handleMessage);
 
