@@ -14,3 +14,25 @@ The screenshot below shows having two different title bar colors for different w
 ![Titlebar Examples](examples/example.jpeg)
 
 ## Installation
+
+This web-extension hasn't been officially published to Firefox's Addon website. To use this web-extension, you may directly download the folder from this Github site, go to Firefox [about:debug](about:debugging#/setup), select any file in the folder to load it to your Firefox browser. 
+
+## License
+
+MPL-2.0 license
+
+See LICENSE.md for more details
+
+## Code of Conduct
+
+See CODE_OF_CONDUCT.md for more details
+
+## Contributing
+
+See CONTRIBUTING.md for more details
+
+## Issues
+ 
+We welcome diversed voices. If there is a bug you want to report or a new function that you want to see, you can post your quest under the Issues section of this Github Repo.
+
+
