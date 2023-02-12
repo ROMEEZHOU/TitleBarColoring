@@ -1,19 +1,34 @@
+
 {
     "manifest_version": 2,
-    "name": "Color Tabs",
+    "name": "TabColor",
     "version": "1.0",
-    "browser_action": {
-      "default_popup": "popup.html"
+    "description": "Adds a color to all new tabs opened.",
+    
+    "icons": {
+        "24": "icons/color-palette.png"
     },
-    "permissions": [
-        "tabs", 
-        "activeTab"
-    ], 
-    "content_scripts": [
-    {
-        "js": ["background.js"],
-        "matches": ["<all_urls>"]
-    }
-    ]
-} 
 
+    "background": {
+        "scripts": [
+            "background.js",
+            "color.js"
+        ]
+    },
+  
+    "web_accessible_resources": [
+        "popup.html",
+        "popup.css",
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery-colorpicker/2.3.3/js/colorpicker.min.js"
+    ],
+  
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/color-palette.png"
+    },
+  
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ]
+  }

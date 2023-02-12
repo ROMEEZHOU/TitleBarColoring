@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
     // Initialize the colorpicker
     $("#color-input").colorpicker({
