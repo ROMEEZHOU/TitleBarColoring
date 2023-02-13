@@ -1,4 +1,4 @@
-# Tab Bar Coloring
+# TabColor
 
 ## Overview
 This Firefox extension allows users to select a color from a pop-up menu to re-style their chosen tab for aesthetic and orgnizational benefits. 
