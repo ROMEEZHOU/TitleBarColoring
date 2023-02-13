@@ -6,7 +6,7 @@ This Firefox extension allows users to select a color from a pop-up menu to re-s
 ## Example
 The screenshot below shows two different title bar colors for different windows. One can press the reset button in the pop-up to return to the default color and theme.
 
-![Titlebar Examples](examples/example.jpeg)
+![Titlebar Examples](example.jpeg)
 
 ## Meet The Team 
 - [Grace Zhang](https://github.com/gracezhang89)
