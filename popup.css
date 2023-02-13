@@ -31,51 +31,55 @@ body {
 }
 
 .button2 {
-  background-color: #da5b00;
+  color: black;
+  background-color: #d3a116;
 }
 
 .button2:hover {
-  background-color: #e38847;
+  color: black;
+  background-color: #dfbb58;
 }
 
 .button3 {
-  background-color: #ffea00;
+  color: black;
+  background-color: #f5f423;
 }
 
 .button3:hover {
-  background-color: #fff36d;
+  color: black;
+  background-color: #fafa8e;
 }
 
 .button4 {
-  background-color: #07a11e;
+  background-color: #3f6215;
 }
 
 .button4:hover {
-  background-color: #61d885;
+  background-color: #5e8231;
 }
 
 .button5 {
-  background-color: #0065d1;
+  background-color: #5660fc;
 }
 
 .button5:hover {
-  background-color: #5a99dc;
+  background-color: #727ae6;
 }
 
 .button6 {
-  background-color: #8509eb;
+  background-color: #8533c1;
 }
 
 .button6:hover {
-  background-color: #a773d1;
+  background-color: #a266cd;
 }
 
 .button7 {
-  background-color: #cf2a8d;
+  background-color: #ba4a8e;
 }
 
 .button7:hover {
-  background-color: #d480b3;
+  background-color: #cb76a9;
 }
 
 .button[type="reset"] {
