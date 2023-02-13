@@ -19,34 +19,34 @@ function themeWindow_default(window) {
 }
 
 async function handleMessage(request, sender, sendResponse) {
-    
+
     let currentWindow = await browser.windows.getLastFocused();
 
     // set colors
     red = "#b02300";
     lightRed = "#df6142";
-    orange = "#da5b00";
-    lightOrange = "#e38847"
-    yellow = "#ffea00";
-    lightYellow = "#fff36d";
-    green = "#07a11e";
-    lightGreen = "#61d885";
-    blue = "#0065d1";
-    lightBlue = "#5a99dc";
+    orange = "#d3a116";
+    lightOrange = "#dfbb58"
+    yellow = "#f5f423";
+    lightYellow = "#fafa8e";
+    green = "#3f6215";
+    lightGreen = "#5e8231";
+    blue = "#5660fc";
+    lightBlue = "#727ae6";
     purple = "#8509eb";
-    lightPurple = "#a773d1";
-    pink = "#cf2a8d";
-    lightPink = "#d480b3";
+    lightPurple = "#a266cd";
+    pink = "#ba4a8e";
+    lightPink = "#cb76a9";
 
     switch (request.greeting) {
         case "Red":
             themeWindow(currentWindow, "white", red, lightRed);
             break;
         case "Orange":
-            themeWindow(currentWindow, "white", orange, lightOrange);
+            themeWindow(currentWindow, "black", orange, lightOrange);
             break;
         case "Yellow":
-            themeWindow(currentWindow, "white", yellow, lightYellow);
+            themeWindow(currentWindow, "black", yellow, lightYellow);
             break;
         case "Green":
             themeWindow(currentWindow, "white", green, lightGreen);
