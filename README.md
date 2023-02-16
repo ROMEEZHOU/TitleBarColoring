@@ -16,7 +16,7 @@ The screenshot below shows two different title bar colors for different windows.
 
 ## Getting Started
 1. Fork this repo to your Github account and run it locally on your machine by cloning it. For a quick review on Github commands, check out this [link](https://education.github.com/git-cheat-sheet-education.pdf). 
-2. Search "about:debugging" in Firefox browser. Click 'This Firefox' on the left side and then click the 'Load Temporary Add-on' button and select the manifest.json file for this project. The extension will appear on the page and should be ready to use! 
+2. Search "`about:debugging`" in Firefox browser. Click 'This Firefox' on the left side and then click the 'Load Temporary Add-on' button and select the `manifest.json` file for this project. The extension will appear on the page and should be ready to use! 
 
 ## Licensing  
 - TabColor is a Free and Open Source (FOSS) project under the [Mozilla Public License 2.0](https://github.com/ossd-s23/TitleBarColoring/blob/main/LICENSE). 
