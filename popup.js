@@ -7,6 +7,7 @@ function handleError(error) {
 }
 
 function notifyBackgroundPage(e) {
+    if (e.target.nodeName !== "BUTTON") return;
     let chosen_color = e.target.textContent;
     const sending = browser.runtime.sendMessage({
         greeting: chosen_color,
