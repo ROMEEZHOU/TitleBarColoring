@@ -60,9 +60,37 @@ async function handleMessage(request, sender, sendResponse) {
         case "Pink":
             themeWindow(currentWindow, "white", pink, lightPink);
             break;
+        case "Random!": 
+            // colorPair will be an array of two colors,
+            // colorPair[0] = darkColor 
+            // colorPair[1] = lightColor
+            colorPair = getRandomColorPair();
+            textColor = "white";
+
+            //if colors are Orange or Yellow, textColor will be black
+            if (colorPair[0] == "#d3a116" || colorPair[0] == "#f5f423"){
+                textColor = "black";
+            }
+            themeWindow(currentWindow, textColor, colorPair[0], colorPair[1]);
+            break;
         default:
             themeWindow_default(currentWindow);
     }
+}
+
+// function to get a random color pair.
+// here, I tranformed colors that were set
+// as a 2D array where each inner array
+// is a pair of a darkColor and a lightColor
+// e.g. [#b02300","#df6142"] = [red, lightRed]
+function getRandomColorPair() {
+    colors = [["#b02300","#df6142"],["#d3a116","#dfbb58"],
+                ["#f5f423","#fafa8e"], ["#3f6215", "#5e8231"],
+                ["#5660fc", "#727ae6"],["#8509eb", "#a266cd"],
+                ["#ba4a8e","#cb76a9"]]
+    var pair = colors[Math.floor(Math.random()*colors.length)];
+    //returns random pair of colors
+    return pair;
 }
 
 browser.runtime.onMessage.addListener(handleMessage);

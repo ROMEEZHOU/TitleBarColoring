@@ -83,6 +83,14 @@ body {
   background-color: #cb76a9;
 }
 
+.button8 {
+  background-color: #808080;
+}
+
+.button8:hover {
+  background-color: #acabab;
+}
+
 .button[type="reset"] {
   background-color: #555555;
 }
